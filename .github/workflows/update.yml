@@ -27,6 +27,7 @@ jobs:
         rm -rf ripgrep*.deb
         bash script.sh AS213891:AS-WYFIX-MEMBER-DN42
         bash script.sh AS210440:AS-AKIX-MEMBER-DN42
+        rm -f conf/* # Delete old files
         mv *.conf conf/
     - name: Commit files
       run: |
