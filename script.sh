@@ -24,7 +24,7 @@ if [[ ! -f "$cache_file" ]] || [[ $(find "$cache_file" -mmin +60 2>/dev/null) ]]
     }
 fi
 
-cat < EOF > $roa_file_v4
+cat << EOF > $roa_file_v4
 #
 # liuzhen932 DN42 ROA Generator - IPv4
 # Last Updated: $(date -u '+%Y-%m-%d %H:%M:%S.%N %z')
@@ -32,7 +32,7 @@ cat < EOF > $roa_file_v4
 #
 EOF
 
-cat < EOF > $roa_file_v6
+cat << EOF > $roa_file_v6
 #
 # liuzhen932 DN42 ROA Generator - IPv6
 # Last Updated: $(date -u '+%Y-%m-%d %H:%M:%S.%N %z')
