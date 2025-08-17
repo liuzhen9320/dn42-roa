@@ -34,5 +34,5 @@ jobs:
         git config --local user.email "bot@932.moe"
         git config --local user.name "HelloTools-bot"
         git add .
-        git commit --allow-empty -m "chore: Update ROA files `date '+%Y-%m-%d %H:%M:%S'` [skip ci]"
+        git commit --allow-empty -m "chore: Update ROA files `date '+%Y-%m-%d %H:%M:%S'` [skip ci]" -m "$(git status --porcelain | wc -l) files | $(git status --porcelain | sed '{:q;N;s/\n/, /g;t q}' | sed 's/^ *//g')"
         git push
